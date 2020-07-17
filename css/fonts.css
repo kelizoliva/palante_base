@@ -1,0 +1,108 @@
+/*-------------------------- WEB FONTS --------------------------*/
+/*------ Default fonts for Palante base theme. Include new -----*/
+/*------ fonts and overridden typography.css in child theme -----*/
+
+@font-face {
+    font-family: 'd-dindin-bold';
+    src: url('../fonts/din/d-din-bold-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-din-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-dindin-italic';
+    src: url('../fonts/din/d-din-italic-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-din-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-dinregular';
+    src: url('../fonts/din/d-din-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-din-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-din_condenseddinCnBd';
+    src: url('../fonts/din/d-dincondensed-bold-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-dincondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-din_condensedregular';
+    src: url('../fonts/din/d-dincondensed-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-dincondensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-din_expdinexp-bold';
+    src: url('../fonts/din/d-dinexp-bold-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-dinexp-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-din_expdinexp-italic';
+    src: url('../fonts/din/d-dinexp-italic-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-dinexp-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'd-din_expregular';
+    src: url('../fonts/din/d-dinexp-webfont.woff2') format('woff2'),
+         url('../fonts/din/d-dinexp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayblack';
+    src: url('../fonts/playfairdisplay/playfairdisplay-black-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay/playfairdisplay-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayblack_italic';
+    src: url('../fonts/playfairdisplay/playfairdisplay-blackitalic-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay/playfairdisplay-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displaybold';
+    src: url('../fonts/playfairdisplay/playfairdisplay-bold-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay/playfairdisplay-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displaybold_italic';
+    src: url('../fonts/playfairdisplay/playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay/playfairdisplay-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayitalic';
+    src: url('../fonts/playfairdisplay/playfairdisplay-italic-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay/playfairdisplay-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'playfair_displayregular';
+    src: url('../fonts/playfairdisplay/playfairdisplay-regular-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplay/playfairdisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'IcoMoon-Free';
+	src: url('../fonts/icomoon/IcoMoon-Free.ttf?-b7qzp2') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

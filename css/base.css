@@ -1,0 +1,686 @@
+
+
+/*----------------------------- Global Styling -----------------------------*/
+
+body {
+	/* Sticknav module is adding weird padding at the top for no reason. Need to figure out the best place for this for other sites (maybe in a PT module?) */
+	padding-top: 0px!important;
+	font-family: 'd-dinregular', sans-serif;
+}
+::selection {
+	color: #ff69b4;
+	background: #20252e;
+}
+
+/* ---- Spacing ---- */
+
+.push-below {
+	margin-bottom: 30px;
+}
+.push-above {
+	margin-top: 30px;
+}
+.top-padding-30 {
+	padding-bottom: 30px;
+}
+.top-padding-30 {
+	padding-top: 30px;
+}
+.layout .l-messages {
+	margin: auto;
+}
+
+/* ---- Block Object Color Options (TODO: NEEDS WORK/REFINEMENT)---- */
+
+.color-blue {
+	background: #006C92;
+	color: #ffffff;
+}
+.color-blue a {
+	color: #f6b640;
+}
+.background-color-white {
+	background:#ffffff;
+}
+.background-color-blue {
+	background: #006C92;
+}
+	
+/* ---- Misc ---- */
+
+.vertical-center {
+	display: flex;
+	align-items: center;
+}
+.clickable-row  {
+	cursor: pointer;
+}
+
+/*------------------------------ Accessibility Styling ------------------------------*/
+
+.sr-only {
+	height:1px;
+	width:1px;
+	position:absolute;
+	overflow:hidden;
+	margin:-1px;
+	clip:rect(0,0,0,0);
+	border:0;
+	}
+[aria-hidden=true] {
+	display:none;
+	}
+
+/*------------------------------ Pager Styling ------------------------------*/
+
+.pager-first, 
+.pager-previous, 
+.pager-ellipsis, 
+.pager-current, 
+.pager-next, 
+.pager-last, 
+.pager-item {
+	background: #006C92;
+}
+.pager-current {
+	background: #20252e;
+}
+.pager-first a:hover, 
+.pager-previous a:hover, 
+.pager-next a:hover, 
+.pager-last a:hover, 
+.pager-item a:hover {
+	background: #20252e;
+}
+
+/*------------------------------ Hover Styling ------------------------------*/
+
+.hover-btn-outline:hover {
+	background:0 0; 
+	border:1px solid;
+	}
+.btn.hover-btn-outline-reverse:hover { 
+	background:auto;
+	border:1px solid transparent;
+	}
+.hover-btn-outline.background-color-white:hover,
+a.hover-btn-outline.background-color-white:hover {
+	color: #ffffff;
+	}
+.hover-btn-outline.background-color-blue:hover,
+a.hover-btn-outline.background-color-blue:hover {
+	color: #006C92;
+	}
+.hover-opacity-0:hover {
+	opacity:0;
+	}
+.hover-opacity-25:hover { 
+	opacity:.25;
+	}
+.hover-opacity-50:hover { 
+	opacity:.5;
+	}
+.hover-opacity-75:hover { 
+	opacity:.75;
+}
+.hover-opacity-100:hover { 
+	opacity:1;
+	}
+.hover-scale-0:hover {
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	transform:scale(0);
+	}
+.hover-scale-50:hover {
+	-webkit-transform:scale(.5);
+	-ms-transform:scale(.5);
+	transform:scale(.5);
+	}
+.hover-scale-100:hover { 
+	-webkit-transform:scale(1);
+	-ms-transform:scale(1);
+	transform:scale(1);
+	}
+.hover-scale-105:hover {
+	-webkit-transform:scale(1.05);
+	-ms-transform:scale(1.05);
+	transform:scale(1.05);
+	}
+
+/*------------------------------ Transition/Animation Styling ------------------------------*/
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../images/loader.gif) center no-repeat #fff;
+}
+.js .animate-box {
+  opacity: 0;
+}
+.transition-background { 
+	-webkit-transition-property:background;
+	transition-property:background;
+	}
+.transition-color { 
+	-webkit-transition-property:color;
+	transition-property:color;
+	}
+.transition-opacity {
+	-webkit-transition-property:opacity; 
+	transition-property:opacity;
+	}
+.transition-transform { 
+	-webkit-transition-property:-webkit-transform;
+	transition-property:transform;
+	}
+.transition-all{
+	-webkit-transition-property:all;
+	transition-property:all;
+	}
+.transition-background-color {
+	-webkit-transition-property:background,color;
+	transition-property:background,color;
+	}
+.transition-background-color-opacity {
+	-webkit-transition-property:background,color,opacity;
+	transition-property:background,color,opacity;
+	}
+.transition-background-color-opacity-transform {
+	-webkit-transition-property:background,color,opacity,-webkit-transform;
+	transition-property:background,color,opacity,transform;
+	}
+.transition-opacity-transform {
+	-webkit-transition-property:opacity,-webkit-transform;
+	transition-property:opacity,transform;
+	}
+.transition-linear {
+	-webkit-transition-timing-function:linear;
+	transition-timing-function:linear;
+	}
+.transition-ease { 
+	-webkit-transition-timing-function:ease;
+	transition-timing-function:ease;
+	}
+.transition-ease-in {
+	-webkit-transition-timing-function:ease-in;
+	transition-timing-function:ease-in;
+	}
+.transition-ease-out {
+	-webkit-transition-timing-function:ease-out;
+	transition-timing-function:ease-out;
+	}
+.transition-ease-in-out { 
+	-webkit-transition-timing-function:ease-in-out;
+	transition-timing-function:ease-in-out;
+	}
+.transition,.transition-normal {
+	-webkit-transition-duration:.4s;
+	transition-duration:.4s;
+	}
+.transition-fast {
+	-webkit-transition-duration:.2s;
+	transition-duration:.2s;
+	}
+.transition-slow { 
+	-webkit-transition-duration:.8s;
+	transition-duration:.8s;
+	}
+.transition-slow-2x { 
+	-webkit-transition-duration:1.2s;
+	transition-duration:1.2s;
+	}
+.transition-slow-4x {
+	-webkit-transition-duration:2s; 
+	transition-duration:2s;
+	}
+
+/*------------------------------ Cursor Styling ------------------------------*/
+
+.cursor-pointer {
+	cursor:pointer;
+	}
+.cursor-default {
+	cursor:default;
+}
+.cursor-auto {
+	cursor:auto;
+	}
+.cursor-none {
+	cursor:none;
+	}
+.cursor-not-allowed {
+	cursor:not-allowed;
+	}
+
+/*------------------------------ Form Styling ------------------------------*/
+
+select::-ms-expand { /* unsets ie select arrow */
+    display: none;
+}
+
+.button, 
+input.form-submit, 
+input.button-primary, 
+button.button-primary, 
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+	background: #006C92;
+}
+.button a {
+	color: #fff;
+	text-decoration: none;
+}
+form {
+	margin: 30px 0;
+}
+input.form-text:focus, 
+input.form-tel:focus, 
+input.form-email:focus, 
+input.form-url:focus, 
+input.form-color:focus, 
+input.form-number:focus, 
+input.form-search:focus, 
+input.form-file:focus, 
+textarea.form-textarea:focus {
+	border-color: #43afe4;
+}
+.views-exposed-form #edit-secondary-wrapper.views-exposed-widget {
+	display: block;
+}
+fieldset {
+	background: transparent;
+	border: none;
+}
+
+/* ---- SumoSelect Library Overrides (TODO: THIS MIGHT BE BETTER PLACED AT THE END OF THE SUMO SELECT CSS FILE IN AN OVERRIDE SECTION) ---- */
+.SumoSelect .CaptionCont.SelectBox {
+	background: #f6f7f8;
+	border: 0;
+	padding: 10px 14px;
+}
+.SumoSelect > .CaptionCont.SelectBox > span.placeholder {
+	color: #474847;
+}
+.SumoSelect > .CaptionCont.SelectBox > label {
+	margin: 0 10px 0.625em;
+}
+
+/*------------------------ Header/Navigation Styling ------------------------*/
+.header-site-name-link {
+	background: transparent;
+}
+.header-identity-wrapper {
+	display: inline-block;
+}
+.front .l-header {
+	background-color: #006C92;
+	color: #ffffff;
+}
+.front .l-header a {
+	color: #ffffff;
+}
+.layout--ptc-full-screen-top .l-header {
+	margin: 0;
+	position: fixed;
+	z-index: 998;
+	transition: all 0.3s ease;
+}
+.layout--ptc-full-screen-top .l-header.header-scroll {
+	background: #20252e;
+	color: #ffffff;
+}
+.layout--ptc-full-screen-top .l-header.header-scroll a {
+	color: #ffffff;
+}
+.layout--ptc-full-screen-top .l-header img {
+	height: 40px;
+}
+.l-header .block-menu {
+	text-align: right;
+}
+.block-system-main-menu .menu-dropdown {
+	float: right;
+	clear: both;
+	width: 95vw;
+}
+.menu-toggle-button-icon, 
+.menu-toggle-button-icon::before, 
+.menu-toggle-button-icon::after {
+	background-color: #ffffff;
+}
+.l-header .menu-toggle-button {
+	padding: .85rem 0;
+}
+.l-header .menu-toggle-button-text {
+	color: #ffffff;
+}
+.menu-dropdown a span.sub-arrow {
+    border-color: transparent;
+    font: normal 3.384615rem/1.8rem 'd-dinregular';
+    background: transparent;
+}
+.js .menu-dropdown li {
+	border-bottom-color: #4888a5;
+}
+.js .menu-dropdown li li {
+	border-bottom-color: transparent;
+}
+.menu-toggle-button,
+.menu-toggle-state {
+    display: inline-block;
+}
+.menu-toggle-state:not(:checked) ~ .menu {
+    display: none;
+}
+.js .menu-dropdown > li {
+    border-bottom: 1px #4888a5 solid;
+    float: none;
+}
+.js .menu-dropdown a.has-submenu.highlighted {
+		border-bottom: none;
+	}
+.menu-dropdown span.sub-arrow:before {
+	font-size: 30px;
+	margin-top: .2rem;
+}
+@media (min-width: 70em) {
+	.menu-dropdown {
+	    width: inherit;
+	}
+	.menu-dropdown a span.sub-arrow {
+		border-color: #ffffff transparent transparent transparent;
+		font: normal 1.384615rem/2.125rem monospace;
+	}
+	.block-system-main-menu .menu-dropdown {
+		width: auto;
+	}
+	.menu-toggle-button,
+	.menu-toggle-state {
+    	display: none;
+  	}
+  	.menu-toggle-state:not(:checked) ~ .menu {
+    	display: block;
+  	}
+  	.js .menu-dropdown > li {
+    	border-bottom: 0;
+		float: left;
+   	}
+}
+
+/* mini nav in full screen left layout */
+.l-navigation {
+	background: #282a29;
+	padding: 5px;
+}
+.l-navigation a {
+	color: #e2e2e2;
+	text-decoration: none;
+}
+.l-navigation .menu {
+	list-style-type: none;
+}
+.l-navigation .menu li {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+.l-navigation .menu li a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.l-navigation .menu-dropdown a span.sub-arrow {
+	font: normal 1.5rem/1.75rem 'd-dinregular';
+}
+.l-navigation .menu-dropdown span.sub-arrow:before {
+	margin-top: 0;
+}
+@media (min-width: 48em) {
+	.js .menu-dropdown > li:hover {
+		background-color: transparent;
+	}
+}
+@media (min-width: 70em) {
+	.l-navigation .menu li {
+		border-left: 1px solid #464747;
+	}
+	.menu-dropdown li:hover a span.sub-arrow {
+		border-color: #fff transparent transparent transparent;
+	}
+	.l-navigation .menu li {
+		border-left: none;
+		border-right: 1px solid #464747;
+	}
+	.l-navigation .block-menu-menu-user-login li {
+		border-right: none;
+	}
+
+}
+
+/*-------------------------- Header left sidebar --------------------------*/
+
+
+.layout--ptc-full-screen-left .l-header h1,
+.layout--ptc-full-screen-left .l-header h2,
+.layout--ptc-full-screen-left .l-header h3 {
+	color: #ffffff;
+}
+
+.layout--ptc-full-screen-left  .header-logo-wrapper {
+	max-width: 75%;
+	float: none;
+}
+
+/*-------------------------- Shrinker and Drawer styling --------------------------*/
+
+
+.shrinkable .shrink,
+.drawer .junk {
+	display: none;
+}
+.shrinkable.default-enlarged .shrink,
+.drawer .default-open .junk{
+	display: block;
+}
+.shrinker {
+	display: block;
+	min-height: 30px;
+	background: url("../images/down-arrow.svg") no-repeat center center;
+	background-size: 20px 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #E2E2E2;
+}
+.pull {
+	display: block;
+	min-height: 30px;
+	background: url("../images/down-arrow.svg") no-repeat center right;
+	background-size: 20px 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #E2E2E2;
+	padding: 1em;
+	margin-top: 1em;
+}
+.shrinker.enlarged {
+	background: url("../images/up-arrow.svg") no-repeat center center;
+	background-size: 20px 20px;
+}
+.pull.open {
+	background: url("../images/up-arrow.svg") no-repeat center right;
+	background-size: 20px 20px;
+}
+@media (min-width: 62em) {
+	.shrinkable .shrink {
+		display: block;
+	}
+	.shrinker {
+		display: none;
+	}
+}
+
+/*-------------------------- Hero Section Styling --------------------------*/
+
+.ptc-hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-image: url('../images/geometric1.svg');
+    height: 110vh;
+    width: 100%;
+    background-color: #006C92;
+    background-attachment: fixed;
+    z-index: 1;
+    clip: rect(0, auto, auto, 0);
+    }
+@media screen and (min-width: 1250px) {
+	.ptc-hero {
+		background-size: 75%;
+	}
+}
+.sticky-content {
+	background-color: rgba(32, 37, 46, .8);
+	color: #fff;
+	padding: 20px;
+	overflow: hidden;
+	top: 20%;
+	position: fixed;
+}
+/* TODO: FIGURE OUT IF THIS IS USED ON SEC SITE AND REMOVE IT IF NOT */
+.dblue-box {
+	background-color: rgba(32, 37, 46, .8);
+	color: #fff;
+	padding: 20px;
+	top: 20%;
+	position: absolute;
+}
+
+@media screen and (min-width: 600px) {
+	.ptc-hero div:not(.contextual-links-wrapper) {
+		top: 30%;
+	}
+}
+
+/*------------------------ Section General Styling (TODO: DESTINGUISH WHICH LAYOUT THESE GO TO) ------------------------*/
+
+.section {
+	padding: 3em 0 3em 0;
+	position: relative;
+	z-index: 2;
+	background: #ffffff;
+}
+.secondary {
+	padding: 0 0 5em 0;
+	position: relative;
+	z-index: 2;
+	background: #ffffff;
+}
+.l-calltoaction {
+	background: #20252e;
+	color: #ffffff;
+	padding: 5em 0 5em 0;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-image: url('../images/geometric1.svg');	
+    background-attachment: fixed;
+}
+.l-calltoaction .block-content {
+	background-color: rgba(32, 37, 46, .8);
+	padding: 15px 30px;
+}
+.l-calltoaction a {
+	color: #f6b640;
+}
+.featured-image {
+	overflow: hidden;
+	border-radius: 4px;
+}
+.featured-image img {
+	width: 100%;
+	position: relative;
+}
+
+/*------------------------ Content General Styling ------------------------*/
+
+body:not(.front) .l-content .header {
+	background: #006C92;
+	margin-bottom: 50px;
+	background-attachment: fixed;
+    background-size: 102%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-image: url("../images/geometric1.svg");
+}
+body:not(.front) .l-content .subheader {
+	margin-bottom: 50px;
+}
+body:not(.front) .l-content .header h1 {
+	color: #ffffff;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 18px;
+	letter-spacing: 6px;
+}
+.shift-paragraph {   
+    padding-left: 60px;
+    display: block;
+    position: relative;
+}
+.submitted-by {
+	font-weight: 700;
+}
+body:not(.front) .l-content img {
+	border-radius: 4px;
+}
+.views-view-grid .views-row, 
+.views-view-grid .views-grid-box {
+	border: none;
+}
+@media (min-width: 48em) {
+	.field-name-field-image {
+		max-width: 50%;
+	}
+}
+
+
+/*------------------------ Views General Styling ------------------------*/
+.view-header {
+	margin-bottom: 30px;
+}
+.view-header h2, 
+.view-header h3, 
+.view-header h4 {
+	padding: 1rem 0 2rem;
+}
+
+/*---------------------------- Footer Styling ----------------------------*/
+
+.l-footer {
+	margin-top: 0;
+	background: #2e2e2e;
+	color: #7b7b7b;
+	border-top: 40px solid #ffffff;
+	padding-top: 30px;
+}
+.drop-lounging:before {
+	top: -30px;
+}
+.drop-lounging {
+	margin-bottom: .25em;
+}
+.l-footer .icon {
+	top: inherit;
+}
+.l-footer .shift-icon .cntr {   
+    padding-left: 20px;
+    padding-right: 0;
+    position: relative;
+    color: #cccccc;
+}
+.block-block-backdrop img {
+	filter: invert(100%);
+	opacity: .75;
+}

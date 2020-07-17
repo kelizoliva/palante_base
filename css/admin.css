@@ -1,0 +1,182 @@
+/**
+ * @file
+ * Admin Styling
+ */
+
+/**
+ * Primary admin tabs
+ */
+nav.tabs:before {
+  /* Background behind primary tabs */
+  background-color: #006C92;
+}
+
+ul.primary {
+  font-size: 0.9375em;
+  text-transform: uppercase;
+  padding: 0.5em 0 0 0.5em;
+}
+
+ul.primary li a,
+ul.primary li a:visited,
+ul.primary li a:hover,
+ul.primary li.active a,
+.expand-dropdown-tabs-control,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before,
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
+  border-color: #586172; /* Should be color of bg behind tabs */
+  color: #010000;
+  background-color: #dee2ea;
+}
+
+ul.primary li.active a,
+ul.primary li.active a.active,
+ul.primary li.active a:active,
+ul.primary li.active a:visited,
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
+  color: #000001;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+ul.primary li a:hover,
+ul.primary li a:focus,
+.expand-dropdown-tabs-control:hover,
+.expand-dropdown-tabs-control:focus,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:hover:before,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:focus:before,
+.responsive-tabs-mobile .expand-dropdown-tabs-control.js-active:before,
+.expand-dropdown-tabs-control.js-active {
+  color: #000001;
+  background: #d5d5d5;
+}
+
+ul.primary li a:active,
+.expand-dropdown-tabs-control:active,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:active:before {
+  background: #dee2ea;
+  box-shadow: inset 0 0 0 0.125em #d5d5d5;
+}
+
+/**
+ * Secondary admin tabs
+ */
+ul.secondary {
+  font-size: 0.8125em;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+ul.secondary li a {
+  border-color: #e3e2e2;
+  color: #444b53;
+}
+
+ul.secondary li a:hover,
+ul.secondary li a:focus,
+ul.secondary li.active a,
+ul.secondary li.active a.active {
+  color: #000000;
+  background: #e3e2e2;
+}
+
+ul.secondary li a:active {
+  color: #000000;
+  background: #e3e2e2;
+  box-shadow: inset 0 0 0 0.125em #ffffff;
+}
+
+/**
+ * Contextual Links font-size
+ */
+.contextual-links-wrapper {
+  font-size: 0.9rem;
+}
+
+/**
+ * Unpublished indicator.
+ */
+.unpublished-indicator {
+  line-height: 1.6rem;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: .75rem;
+}
+
+/**
+ * Responsive tabs
+ */
+.responsive-tabs-mobile ul.primary {
+  background: #ffffff;
+}
+
+.expand-dropdown-tabs ul.responsive-tabs-dropdown li a,
+.expand-dropdown-tabs ul.responsive-tabs-dropdown li a:hover {
+  border-top-color: #ffffff;
+}
+
+.expand-dropdown-tabs-control:before {
+  content: '...';
+  font-weight: bold;
+}
+
+.responsive-tabs-after .expand-dropdown-tabs-control {
+  border-left-color: 2px solid #d5d5d5;
+}
+
+.expand-dropdown-tabs-label {
+  text-transform: uppercase;
+}
+
+.expand-dropdown-tabs-control:hover .expand-dropdown-tabs-label,
+.responsive-tabs-mobile.js-active .expand-dropdown-tabs-label {
+  background: #e8e8e8;
+}
+
+.responsive-tabs-mobile.expand-dropdown-tabs .expand-dropdown-tabs-label,
+.responsive-tabs-mobile.expand-dropdown-tabs:hover .expand-dropdown-tabs-label {
+  background: #ffffff;
+}
+
+.responsive-tabs-mobile .expand-dropdown-tabs-control.js-active {
+  background: #ffffff;
+}
+
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before {
+  background: #dee2ea;
+}
+
+.responsive-tabs-mobile.expand-dropdown-tabs .expand-dropdown-tabs-control:before {
+  background: #ffffff;
+}
+
+.responsive-tabs-mobile .expand-dropdown-tabs-control:after {
+  border-right-color: #000000;
+}
+
+.expand-dropdown-tabs .expand-dropdown-tabs-control:after {
+  border-top-color: #d5d5d5;
+}
+
+.responsive-tabs-mobile ul.primary,
+.responsive-tabs-mobile.expand-dropdown-tabs ul.primary {
+  background: #ffffff;
+}
+
+.responsive-tabs-mobile ul.primary,
+.expand-dropdown-tabs.responsive-tabs-mobile ul.primary {
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 4px;
+}
+
+.responsive-tabs-mobile ul.primary li {
+  border-bottom-color: #ffffff;
+}
+
+.responsive-tabs-mobile ul.primary a:after {
+  background: #d5d5d5;
+}
+
+.responsive-tabs-mobile-header-padder {
+  background: #586172;
+}
