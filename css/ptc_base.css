@@ -77,12 +77,23 @@ nav.tabs:before {
 	background: transparent;
 	display: none;
 }
-ul.primary li.active a, ul.primary li.active a.active, ul.primary li.active a:active, ul.primary li.active a:visited, .responsive-tabs-mobile .expand-dropdown-tabs-label {
-	background-color: #282A29!important;
-	color: #f6f7f8!important;
+.logged-in ul.primary li.active a, 
+.logged-in ul.primary li.active a.active, 
+.logged-in ul.primary li.active a:active, 
+.logged-in ul.primary li.active a:visited, 
+.responsive-tabs-mobile 
+.expand-dropdown-tabs-label {
+	background-color: #282A29;
+	color: #f6f7f8;
 }
-ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.active a, .expand-dropdown-tabs-control, .responsive-tabs-mobile .expand-dropdown-tabs-control:before, .responsive-tabs-mobile .expand-dropdown-tabs-label {
-	background-color: #f6f7f8!important;
+.logged-in ul.primary li a, 
+.logged-in ul.primary li a:visited, 
+.logged-in ul.primary li a:hover, 
+.logged-in ul.primary li.active a, 
+.expand-dropdown-tabs-control, 
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before, 
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
+	background-color: #f6f7f8;
 	border-color: #006C92;
 }
 ul.primary {
