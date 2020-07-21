@@ -47,6 +47,10 @@
 }());
 
 $(document).ready(function () {
+	// Load the scroll classes as needed.
+	$('#l-header .scrollme').parent().addClass( 'autoscroll' );
+	$('#l-header .scrollme').parent().siblings( '.l-content' ).addClass( 'scrollpad' );
+	// Drawers
 	$('.shrinkable').each(function () {
 		$(this).after( '<div class="shrinker"></div>' );
   	});
@@ -72,13 +76,13 @@ $(window).on('load', function (e) {
     // Detect window scroll and update navbar
     $(window).scroll(function() {
       if ($(this).scrollTop() > 120) {
-        $('#l-header').addClass('header-scroll');
+        $('#l-header.autoscroll').addClass('header-scroll');
       } else {
-        $('#l-header').removeClass('header-scroll');
+        $('#l-header.autoscroll').removeClass('header-scroll');
       }
     });
     if ($(window).scrollTop() > 120) {
-      $('#l-header').addClass('header-scroll');
+      $('#l-header.autoscroll').addClass('header-scroll');
     }
 	// Smooth scroll for links with .scrollto classes  
 	$('.scrollto').on('click', function() {
@@ -87,10 +91,10 @@ $(window).on('load', function (e) {
       if (target.length) {
         var top_space = 0;
 
-        if ($('#l-header').length) {
-          top_space = $('#l-header').outerHeight();
+        if ($('#l-header.autoscroll').length) {
+          top_space = $('#l-header.autoscroll').outerHeight();
 
-          if (! $('#l-header').hasClass('header-scrolled')) {
+          if (! $('#l-header.autoscroll').hasClass('header-scrolled')) {
             top_space = top_space - 40;
           }
         }

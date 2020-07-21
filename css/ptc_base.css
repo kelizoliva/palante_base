@@ -324,11 +324,15 @@ fieldset {
 .front .l-header a {
 	color: #ffffff;
 }
+
+/* Fullscreen Top Layout */
 .layout--ptc-full-screen-top .l-header {
 	margin: 0;
+	transition: all 0.3s ease;
+}
+.layout--ptc-full-screen-top .l-header.autoscroll {
 	position: fixed;
 	z-index: 998;
-	transition: all 0.3s ease;
 }
 .layout--ptc-full-screen-top .l-header.header-scroll {
 	background: #20252e;
@@ -340,6 +344,8 @@ fieldset {
 .layout--ptc-full-screen-top .l-header img {
 	height: 40px;
 }
+/* End Fullscreen Top Layout */
+
 .l-header .block-menu {
 	text-align: right;
 }
@@ -566,10 +572,12 @@ fieldset {
 /*------------------------ Section General Styling (TODO: DESTINGUISH WHICH LAYOUT THESE GO TO) ------------------------*/
 
 .section {
-	padding: 3em 0 3em 0;
 	position: relative;
 	z-index: 2;
 	background: #ffffff;
+}
+.section.scrollpad {
+	padding: 3em 0 3em 0;
 }
 .secondary {
 	padding: 0 0 5em 0;
