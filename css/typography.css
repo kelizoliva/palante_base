@@ -29,6 +29,12 @@ h1.block-title {
 }
 
 /*------------------------------ Text ------------------------------*/
+body {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	font-family: 'd-dinregular', sans-serif;
+}
 p, .l-content li:not(.horizontal-tab-button) {
 	font-size: 1.2em;
 }
@@ -70,52 +76,6 @@ ul {
 	list-style-type: square;
 }
 
-/*------------------------------ Buttons ------------------------------*/
-
-.btn {
-	padding:10px 16px;
-	text-align:center;
-	border:1px solid transparent;
-	font-size:1rem;
-	-ms-touch-action:manipulation;
-	touch-action:manipulation;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	text-decoration: none;
-	font-family: 'd-din_expdinexp-bold', sans-serif;
-	}
-.btn.radius {
-	border-radius:5px;
-	}
-.btn.btn-lg { 
-	padding:16px 24px;
-	font-size:1.2rem;
-	}
-.btn.btn-sm {
-	padding:6px;
-	font-size:.9rem;
-	}
-.btn.btn-pill { 
-	border-radius:20px;
-}
-.btn.btn-outline {
-	background:0 0;
-	border:1px solid;
-	}
-.btn.btn-outline.btn-outline-thick {
-	border:2px solid;
-	}
-.btn.btn-block+.btn-block{ 
-	border-top-color:transparent;
-}
-.btn.background-color-white,
-a.btn.background-color-white {
-	color: #777777;
-	}
-.btn.background-color-blue,
-a.btn.background-color-blue {
-	color: #ffffff;
-	}
 
 /*------------------------------ Icons ------------------------------*/
 
