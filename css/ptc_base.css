@@ -265,6 +265,38 @@ a.hover-btn-outline.background-color-blue:hover {
 	-webkit-transition-duration:2s; 
 	transition-duration:2s;
 	}
+	
+/* Back to Top */
+.top-scroller {
+  position: fixed;
+  bottom: 50px;
+  right: 15px;
+  font-size: 1em;
+  display: none;
+  z-index: 2;
+  text-align: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  line-height: 30px;
+}
+.top-scroller svg {
+	height: auto;
+	width: 25px;
+	position: relative;
+	top: 6px;
+}
+.top-scroller span {
+	color: rgba(0,0,0,.35);
+	text-transform: uppercase;
+	
+}
+ .top-scroller:hover {
+    background: rgba(0,0,0,.6);
+}
 
 /*------------------------------ Cursor Styling ------------------------------*/
 
