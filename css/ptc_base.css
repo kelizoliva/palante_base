@@ -19,7 +19,13 @@ body {
 .push-above {
 	margin-top: 30px;
 }
-.top-padding-30 {
+.bottom-padding-15 {
+	padding-bottom: 15px;
+}
+.top-padding-15 {
+	padding-top: 15px;
+}
+.bottom-padding-30 {
 	padding-bottom: 30px;
 }
 .top-padding-30 {
@@ -47,16 +53,19 @@ body {
 	
 /* ---- Misc ---- */
 
+.hide {
+	display: none;
+}
 .vertical-center {
 	display: flex;
 	align-items: center;
 }
+.horizontal-center {
+	margin: auto;
+}
 .clickable-row  {
 	cursor: pointer;
 }
-
-
-
 .sr-only {
 	height:1px;
 	width:1px;
@@ -69,6 +78,24 @@ body {
 [aria-hidden=true] {
 	display:none;
 	}
+
+/*----------------------------- Layout Modifiers -----------------------------*/
+
+.container.justify-start {
+    justify-content: flex-start;
+  }
+.container.justify-end {
+    justify-content: flex-end;
+  }
+.container.justify-center {
+    justify-content: center;
+  }
+.container.justify-space-between {
+    justify-content: space-between;
+  }
+.container.justify-space-around {
+    justify-content: space-around;
+  }
 
 /*------------------------------ Front-end Admin UI Styling ------------------------------*/
 nav.tabs:before {
@@ -330,6 +357,12 @@ a.btn.background-color-white {
 a.btn.background-color-blue {
 	color: #ffffff;
 	}
+	
+/*------------------------------ Icons ------------------------------*/
+
+.ico {
+    display: inline-block;
+}
 
 /*------------------------------ Form Styling ------------------------------*/
 
@@ -748,6 +781,13 @@ body:not(.front) .l-content img {
 	color: #7b7b7b;
 	border-top: 40px solid #ffffff;
 	padding-top: 30px;
+}
+.l-bottom .menu {
+	list-style: none;
+	font-weight: 700;
+}
+.l-bottom .menu li {
+	margin: 0;
 }
 .drop-lounging:before {
 	top: -30px;

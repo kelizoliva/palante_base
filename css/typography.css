@@ -76,45 +76,6 @@ ul {
 	list-style-type: square;
 }
 
-
-/*------------------------------ Icons ------------------------------*/
-
-.icon {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    display: block;
-    visibility: hidden;
-}
-.icon i {
-	font-size: 40px;
-	color: #006C92;
-}
-.icon i:before {
-	visibility: visible;
-}
-[class^="icon-"] i, [class*=" icon-"] i {
-	font-family: 'IcoMoon-Free' !important;
-    speak: none;
-    font-style: normal!important;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
- .shift-icon .container, .icon-header {   
-    padding-left: 60px;
-    padding-right: 10px;
-    display: block;
-    position: relative;
-    color: #5d5d5d;
-}
-.icon-header .icon {
-	top: 5px;
-}
-
 /*------------------------------ Navigation ------------------------------*/
 
 .l-header ul:not(.contextual-links) li {
@@ -144,8 +105,7 @@ ul {
 	line-height: 24px;
 	font-family: 'd-din_expdinexp-bold';
 }
-.l-footer a, 
-.l-footer .icon i {
+.l-footer a {
 	color: #cccccc;
 	font-size: 14px;
 }
