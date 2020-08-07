@@ -2,14 +2,10 @@
    var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
-
 			if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-				
 				i++;
-
 				$(this.element).addClass('item-animate');
 				setTimeout(function(){
-
 					$('body .animate-box.item-animate').each(function(k){
 						var el = $(this);
 						setTimeout( function () {
@@ -23,15 +19,11 @@
 							} else {
 								el.addClass('fadeInUp animated-fast');
 							}
-
 							el.removeClass('item-animate');
 						},  k * 200, 'easeInOutExpo' );
 					});
-					
-				}, 100);
-				
+				}, 100);	
 			}
-
 		} , { offset: '85%' } );
 	};
 	// Loading page
@@ -47,9 +39,6 @@
 }());
 
 $(document).ready(function () {
-	// Load the scroll classes as needed.
-	$('#l-header .scrollme').parent().addClass( 'autoscroll' );
-	$('#l-header .scrollme').parent().siblings( '.l-content' ).addClass( 'scrollpad' );
 	// Drawers
 	$('.shrinkable').each(function () {
 		$(this).after( '<div class="shrinker"></div>' );
@@ -73,37 +62,12 @@ $(document).ready(function () {
 $(window).on('load', function (e) {
     // Initiate the wowjs animation library
     new WOW().init();
-    // Detect window scroll and update navbar
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 120) {
-        $('#l-header.autoscroll').addClass('header-scroll');
-      } else {
-        $('#l-header.autoscroll').removeClass('header-scroll');
-      }
-    });
-    if ($(window).scrollTop() > 120) {
-      $('#l-header.autoscroll').addClass('header-scroll');
-    }
-	// Smooth scroll for links with .scrollto classes  
+   	// Smooth scroll for links with .scrollto classes  
 	$('.scrollto').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
         var top_space = 0;
-
-        if ($('#l-header.autoscroll').length) {
-          top_space = $('#l-header.autoscroll').outerHeight();
-
-          if (! $('#l-header.autoscroll').hasClass('header-scrolled')) {
-            top_space = top_space - 40;
-          }
-        }
-
-        $('html, body').animate({
-          scrollTop: target.offset().top - top_space
-        }, 1500, 'easeInOutExpo');
-
-        return false;
       }
     }
   });

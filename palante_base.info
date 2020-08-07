@@ -10,6 +10,7 @@ stylesheets[all][] = css/bootstrap-sizing.css
 stylesheets[all][] = css/ptc_base.css
 stylesheets[all][] = css/typography.css
 stylesheets[all][] = css/icons.css
+stylesheets[all][] = css/themify-icons.css
 stylesheets[all][] = css/animate.css
 stylesheets[all][] = css/admin.css
 stylesheets[all][] = css/sumoselect.css
