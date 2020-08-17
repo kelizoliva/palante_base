@@ -19,6 +19,9 @@ body {
 .push-above {
 	margin-top: 30px;
 }
+.gutter {
+	padding: 0 16px;
+}
 .bottom-padding-15 {
 	padding-bottom: 15px;
 }
@@ -466,23 +469,28 @@ fieldset {
 }
 
 /* Fullscreen Top Layout */
-.layout--ptc-full-screen-top .l-header {
+.layout--ptc-full-screen-top .l-header,
+.layout--ptc-full-screen-top-right .l-header {
 	margin: 0;
 	transition: all 0.3s ease;
 }
-.layout--ptc-full-screen-top .l-header .autoscroll {
+.layout--ptc-full-screen-top .l-header .autoscroll,
+.layout--ptc-full-screen-top-right .l-header .autoscroll {
 	position: fixed;
 	z-index: 998;
 }
-.layout--ptc-full-screen-top .l-header .header-scroll {
+.layout--ptc-full-screen-top .l-header .header-scroll,
+.layout--ptc-full-screen-top-right .l-header .header-scroll {
 	background: #20252e;
 	color: #ffffff;
 	top: 0;
 }
-.layout--ptc-full-screen-top .l-header .header-scroll a {
+.layout--ptc-full-screen-top .l-header .header-scroll a,
+.layout--ptc-full-screen-top-right .l-header .header-scroll a {
 	color: #ffffff;
 }
-.layout--ptc-full-screen-top .l-header img {
+.layout--ptc-full-screen-top .l-header img,
+.layout--ptc-full-screen-top-right .l-header img {
 	height: 40px;
 }
 /* End Fullscreen Top Layout */
