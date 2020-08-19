@@ -300,32 +300,36 @@ a.hover-btn-outline.background-color-blue:hover {
 .top-scroller {
   position: fixed;
   bottom: 50px;
-  right: 15px;
+  right: 1em;
   font-size: 1em;
   display: none;
   z-index: 2;
   text-align: center;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border-radius: 20%;
   background: rgba(0,0,0,.35);
   color: #fff;
-  line-height: 30px;
+  line-height: 24px;
+  transition: ease .3s opacity;
 }
 .top-scroller svg {
 	height: auto;
-	width: 25px;
+	width: 15px;
 	position: relative;
 	top: 6px;
 }
 .top-scroller span {
-	color: rgba(0,0,0,.35);
 	text-transform: uppercase;
 	
 }
  .top-scroller:hover {
-    background: rgba(0,0,0,.6);
+    opacity: .8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
 }
 
 /*------------------------------ Cursor Styling ------------------------------*/
