@@ -81,6 +81,17 @@ body {
 [aria-hidden=true] {
 	display:none;
 	}
+.iframe-container {
+    position: relative;
+    padding: 2em;
+}
+.iframe-container iframe {
+  	position: relative;
+    width: 100vw;
+    height: 35vw;
+    border: 0;
+    padding: 1em;
+}
 
 /*----------------------------- Layout Modifiers -----------------------------*/
 
