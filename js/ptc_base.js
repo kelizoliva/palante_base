@@ -75,6 +75,7 @@ $(window).on('load', function (e) {
   $('.line-break').each(function () {
 	$(this).html($(this).html().replace('||','<br />'));
   });
+  
   // Shrinkable sidebar
   $('.shrinkable').each(function () {
 	  if ($(this).hasClass('default-enlarged')) {
@@ -86,6 +87,16 @@ $(window).on('load', function (e) {
 	    return false;
 	  });
   });
+  // Secondary shrinker (requires additonal coding in sub-theme)
+	  if ($('.shrinkable_2').hasClass('default-enlarged')) {
+			$(this).siblings('.shrinker_2').addClass('enlarged');
+	  }
+	  $('.shrinkable_2').siblings('.shrinker_2').click(function(){
+		$(this).toggleClass('enlarged');
+	    $(this).siblings('.shrinkable_2').slideToggle();
+	    return false;
+	  });
+
   // Drawers in content
   $('.drawer').each(function () {
 	  if ($(this).hasClass('default-open')) {
