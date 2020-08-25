@@ -1,25 +1,54 @@
-$(function () {
-  
-	// Drawers
-	$('.shrinkable').each(function () {
-		$(this).after( '<div class="shrinker"></div>' );
-  	});
-  	$('.drawer').each(function () {
-	  	if($(this).has('.junk').length !== 0) {
-			$( '<div class="pull"></div>' ).insertBefore($(this).children('.junk').first());
-		}
-  });
-  	
-  // Make views rows clickable by using the 'clickable-row' class in the view format's "row class" field, and the 'usethislink' class applied as the anchor wrapper
-  jQuery('.clickable-row.views-row').each(function() {
-    if (jQuery(this).find('.usethislink a').length) {
-      jQuery(this).click(function() {
-        window.location = jQuery(this).find('.usethislink a').attr('href');
-        return false;
+Backdrop.behaviors.portal = {
+  attach: function(context, settings) {
+    $(function () {
+      
+    	// Drawers
+    	$('.shrinkable', context).each(function () {
+    		$(this).after( '<div class="shrinker"></div>' );
+      	});
+      $('.drawer', context).each(function () {
+    	  if($(this).has('.junk').length !== 0) {
+    			$( '<div class="pull"></div>' ).insertBefore($(this).children('.junk').first());
+    		}
       });
-    }
-  });
-});
+      	
+      // Make views rows clickable by using the 'clickable-row' class in the view format's "row class" field, and the 'usethislink' class applied as the anchor wrapper
+      jQuery('.clickable-row.views-row', context).each(function() {
+        if (jQuery(this).find('.usethislink a').length) {
+          jQuery(this).click(function() {
+            window.location = jQuery(this).find('.usethislink a').attr('href');
+            return false;
+          });
+        }
+      });
+      
+      // Create a line break in text with a double pipe || (great to use in title fields!)
+      $('.line-break', context).each(function () {
+  	    $(this).html($(this).html().replace('||','<br />'));
+      });
+      
+      // Drawers in content
+      $('.drawer', context).each(function () {
+    	  if ($(this).hasClass('default-open')) {
+    			$(this).children('.pull').addClass('open');
+    	  }
+    	  $(this).children('.pull').click(function(){
+    		$(this).toggleClass('open');
+    	    $(this).parent().children('.junk').slideToggle();
+    	    return false;
+    	  });
+      });
+      /* this is a jumpy mess, might remove.
+      $(document).click(function(event) {
+        if (!$(event.target).closest(".pull").length) {
+        	$("body").find(".pull").removeClass("open");
+        	$("body").find(".junk").slideUp();
+    	  }
+      });
+      */
+    });
+  }
+};
 
 $(window).on('load', function (e) {
   
@@ -36,12 +65,7 @@ $(window).on('load', function (e) {
     }
   });
   
-  // Create a line break in text with a double pipe || (great to use in title fields!)
-  $('.line-break').each(function () {
-	  $(this).html($(this).html().replace('||','<br />'));
-  });
-  
-  // Shrinkable sidebar
+  // Shrinkable sidebar (can be used wherever, but the styling was catered to sidebar content, so)
   $('.shrinkable').each(function () {
 	  if ($(this).hasClass('default-enlarged')) {
 			$(this).siblings('.shrinker').addClass('enlarged');
@@ -53,35 +77,15 @@ $(window).on('load', function (e) {
 	  });
   });
 
-  // Secondary shrinker (requires additonal coding in sub-theme)
-	  if ($('.shrinkable_2').hasClass('default-enlarged')) {
-			$(this).siblings('.shrinker_2').addClass('enlarged');
-	  }
-	  $('.shrinkable_2').siblings('.shrinker_2').click(function(){
+  // Secondary shrinker for other content (requires additonal coding in sub-theme)
+  if ($('.shrinkable_2').hasClass('default-enlarged')) {
+		$(this).siblings('.shrinker_2').addClass('enlarged');
+  }
+  $('.shrinkable_2').siblings('.shrinker_2').click(function(){
 		$(this).toggleClass('enlarged');
-	    $(this).siblings('.shrinkable_2').slideToggle();
-	    return false;
-	  });
-	  
-  // Drawers in content
-  $('.drawer').each(function () {
-	  if ($(this).hasClass('default-open')) {
-			$(this).children('.pull').addClass('open');
-	  }
-	  $(this).children('.pull').click(function(){
-		$(this).toggleClass('open');
-	    $(this).parent().children('.junk').slideToggle();
-	    return false;
-	  });
+    $(this).siblings('.shrinkable_2').slideToggle();
+    return false;
   });
-  /* this is a jumpy mess, might remove.
-  $(document).click(function(event) {
-    if (!$(event.target).closest(".pull").length) {
-    	$("body").find(".pull").removeClass("open");
-    	$("body").find(".junk").slideUp();
-	  }
-  });
-  */
   
   /* ----------------------------------
   SCROLL TO TOP BEHAVIOR
@@ -107,13 +111,3 @@ $(window).on('load', function (e) {
   /* -------------------------------------- */
   
 });
-
- 
-
-/*Backdrop.behaviors.portal = {
-  attach: function(context, settings) {
-    
-    
-  }
-};*/
-
