@@ -62,7 +62,7 @@ $(window).on('load', function (e) {
 	    $(this).siblings('.shrinkable_2').slideToggle();
 	    return false;
 	  });
-
+	  
   // Drawers in content
   $('.drawer').each(function () {
 	  if ($(this).hasClass('default-open')) {
