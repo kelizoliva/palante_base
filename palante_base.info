@@ -22,6 +22,7 @@ scripts[] = js/wow.min.js
 scripts[] = js/jquery.waypoints.min.js
 scripts[] = js/liga.js
 scripts[] = js/jquery.sumoselect.min.js
+scripts[] = js/ptc_waypoints.js
 scripts[] = js/ptc_base.js
 
 
