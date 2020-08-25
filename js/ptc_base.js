@@ -1,4 +1,4 @@
-Backdrop.behaviors.portal = {
+Backdrop.behaviors.base = {
   attach: function(context, settings) {
     $(function () {
       
@@ -27,13 +27,13 @@ Backdrop.behaviors.portal = {
   	    $(this).html($(this).html().replace('||','<br />'));
       });
       
-      // Drawers in content
+      // Content drawers. Example usage: apply 'drawer' class to view row class, apply 'junk' class to any junk that should end up in the drawer. Apply 'pull' class to the field that should open the drawer. 
       $('.drawer', context).each(function () {
     	  if ($(this).hasClass('default-open')) {
     			$(this).children('.pull').addClass('open');
     	  }
     	  $(this).children('.pull').click(function(){
-    		$(this).toggleClass('open');
+    		  $(this).toggleClass('open');
     	    $(this).parent().children('.junk').slideToggle();
     	    return false;
     	  });

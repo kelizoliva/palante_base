@@ -92,16 +92,22 @@ body {
 	display:none;
 	}
 .iframe-container {
-    position: relative;
-    padding: 2em;
+  position: relative;
+  padding: 2em;
 }
 .iframe-container iframe {
-  	position: relative;
-    width: 100vw;
-    height: 35vw;
-    border: 0;
-    padding: 1em;
+	position: relative;
+  width: 100vw;
+  height: 35vw;
+  border: 0;
+  padding: 1em;
 }
+
+/* Progress Bar */
+.pager .ajax-progress, .pager .ajax-progress-bar {
+  display: none;
+}
+
 
 /*----------------------------- Layout Modifiers -----------------------------*/
 
@@ -875,10 +881,10 @@ body:not(.front) .l-content img {
 	top: inherit;
 }
 .l-footer .shift-icon .cntr {   
-    padding-left: 20px;
-    padding-right: 0;
-    position: relative;
-    color: #cccccc;
+  padding-left: 20px;
+  padding-right: 0;
+  position: relative;
+  color: #cccccc;
 }
 .block-block-backdrop img {
 	filter: invert(100%);
