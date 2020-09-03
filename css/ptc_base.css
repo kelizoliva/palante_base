@@ -344,8 +344,7 @@ a.hover-btn-outline.background-color-blue:hover {
 .top-scroller svg {
 	height: auto;
 	width: 15px;
-	position: relative;
-	top: 6px;
+	padding-top: 6px;
 }
 .top-scroller span {
 	text-transform: uppercase;
