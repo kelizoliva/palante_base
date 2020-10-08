@@ -43,7 +43,7 @@ switch ($layout_type) {
             }
               foreach ($rows as $id => $row) {
                 if ($row_classes[$id]) {
-                    print '<div class="col-md-6 gutters l-halves-region ' . implode(' ', $row_classes[$id]) . '">' . $row . '</div>';
+                    print '<div class="col-12 col-sm-6 gutters l-halves-region ' . implode(' ', $row_classes[$id]) . '">' . $row . '</div>';
                 }
             }
             print '</div>';
@@ -56,7 +56,7 @@ switch ($layout_type) {
             }
               foreach ($rows as $id => $row) {
                 if ($row_classes[$id]) {
-                    print '<div class="col-md-4 gutters l-thirds-region ' . implode(' ', $row_classes[$id]) . '">' . $row . '</div>';
+                    print '<div class="col-12 col-sm-4 gutters l-thirds-region ' . implode(' ', $row_classes[$id]) . '">' . $row . '</div>';
                 }
             }
             print '</div>';
@@ -69,7 +69,7 @@ switch ($layout_type) {
             }
               foreach ($rows as $id => $row) {
                 if ($row_classes[$id]) {
-                    print '<div class="col-md-3 l-quarters-region ' . implode(' ', $row_classes[$id]) . '">' . $row . '</div>';
+                    print '<div class="col-12 col-sm-3 l-quarters-region ' . implode(' ', $row_classes[$id]) . '">' . $row . '</div>';
                 }
             }
             print '</div>';
