@@ -6,6 +6,9 @@ body {
 	/* Sticknav module is adding weird padding at the top for no reason. Need to figure out the best place for this for other sites (maybe in a PT module?) */
 	padding-top: 0px!important;
 }
+.layout {
+  height: 100%;
+}
 ::selection {
 	color: #ff69b4;
 	background: #20252e;
@@ -803,7 +806,7 @@ fieldset {
 
 /*------------------------ Content General Styling ------------------------*/
 
-body:not(.front) .l-content .header {
+body:not(.front) .l-content .header, body:not(.front) .l-top .header {
 	background: #006C92;
 	margin-bottom: 50px;
 	background-attachment: fixed;
@@ -815,7 +818,7 @@ body:not(.front) .l-content .header {
 body:not(.front) .l-content .subheader {
 	margin-bottom: 50px;
 }
-body:not(.front) .l-content .header h1 {
+body:not(.front) .l-content .header h1, body:not(.front) .l-top .header h1 {
 	color: #ffffff;
 	margin-top: 40px;
 	margin-bottom: 40px;
