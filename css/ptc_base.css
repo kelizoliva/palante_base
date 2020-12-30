@@ -180,6 +180,13 @@ ul.primary {
 .pager-item a:hover {
 	background: #20252e;
 }
+.pager-item a{
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: auto;
+  text-indent: 0;;
+}
 
 /*------------------------------ Hover Styling ------------------------------*/
 
