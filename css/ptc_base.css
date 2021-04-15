@@ -28,6 +28,12 @@ body {
 .margin-1em {
 	margin: 1em;
 }
+.bottom-padding-10 {
+	padding-bottom: 150x;
+}
+.top-padding-10 {
+	padding-top: 10px;
+}
 .bottom-padding-15 {
 	padding-bottom: 15px;
 }
